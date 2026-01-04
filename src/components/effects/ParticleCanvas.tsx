@@ -39,7 +39,7 @@ export default function ParticleCanvas() {
   return (
     <Particles
       id="tsparticles"
-      className="absolute inset-0 -z-10"
+      className="absolute inset-0 z-0"
       options={options}
     />
   );

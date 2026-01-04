@@ -38,9 +38,9 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-24">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left column - Main content */}
-          <div className="lg:col-span-7">
+        <div className="max-w-4xl">
+          {/* Main content */}
+          <div>
             {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -109,60 +109,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right column - Stats/Visual element */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="lg:col-span-5 hidden lg:block"
-          >
-            <div className="relative">
-              {/* Sonar-like decorative element */}
-              <div className="relative w-full aspect-square max-w-md mx-auto">
-                {/* Concentric rings */}
-                {[1, 2, 3].map((ring) => (
-                  <div
-                    key={ring}
-                    className="absolute inset-0 rounded-full border border-teal/20"
-                    style={{
-                      transform: `scale(${0.3 + ring * 0.25})`,
-                      animation: `sonar ${3 + ring}s ease-out infinite`,
-                      animationDelay: `${ring * 0.5}s`,
-                    }}
-                  />
-                ))}
-
-                {/* Center element */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="glass rounded-2xl p-8 backdrop-blur-xl">
-                    <div className="grid grid-cols-2 gap-6">
-                      {[
-                        { value: "150+", label: "Projects" },
-                        { value: "98%", label: "Success Rate" },
-                        { value: "5x", label: "Avg. ROI" },
-                        { value: "24/7", label: "Support" },
-                      ].map((stat, index) => (
-                        <motion.div
-                          key={stat.label}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.7 + index * 0.1 }}
-                          className="text-center"
-                        >
-                          <div className="text-2xl font-display font-bold text-white">
-                            {stat.value}
-                          </div>
-                          <div className="text-xs text-mist uppercase tracking-wider mt-1">
-                            {stat.label}
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
 
