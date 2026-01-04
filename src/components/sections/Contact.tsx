@@ -66,10 +66,10 @@ export default function Contact() {
                     Email Us
                   </div>
                   <a
-                    href="mailto:hello@coastalvanguard.com"
+                    href="mailto:info@coastalvanguard.com"
                     className="text-fog hover:text-white transition-colors duration-300 font-medium"
                   >
-                    hello@coastalvanguard.com
+                    info@coastalvanguard.com
                   </a>
                 </div>
               </div>
