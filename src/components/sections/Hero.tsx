@@ -106,15 +106,13 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="relative w-full aspect-square max-w-md mx-auto">
-                {/* Concentric rings */}
+                {/* Concentric rings - static and visible */}
                 {[1, 2, 3].map((ring) => (
                   <div
                     key={ring}
-                    className="absolute inset-0 rounded-full border border-white/10"
+                    className="absolute inset-0 rounded-full border border-white/30"
                     style={{
                       transform: `scale(${0.3 + ring * 0.25})`,
-                      animation: `sonar ${3 + ring}s ease-out infinite`,
-                      animationDelay: `${ring * 0.5}s`,
                     }}
                   />
                 ))}
