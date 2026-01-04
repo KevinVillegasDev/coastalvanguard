@@ -43,7 +43,7 @@ export default function Header() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-28 md:h-36">
           {/* Logo - Bigger */}
           <motion.a
             href="#"
@@ -54,9 +54,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Coastal Vanguard"
-              width={280}
-              height={70}
-              className="h-14 md:h-16 w-auto"
+              width={500}
+              height={125}
+              className="h-24 md:h-32 w-auto"
               style={{ filter: "drop-shadow(0 0 20px rgba(0, 194, 184, 0.3))" }}
               priority
             />
