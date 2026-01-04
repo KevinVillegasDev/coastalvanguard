@@ -16,76 +16,9 @@ export default function Contact() {
   } = form;
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 mesh-gradient" />
-
+    <section id="contact" className="py-32 relative overflow-hidden bg-deep">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
-
-      {/* Compass decoration */}
-      <div className="absolute top-20 right-20 opacity-5">
-        <svg
-          width="200"
-          height="200"
-          viewBox="0 0 200 200"
-          fill="none"
-          className="text-white"
-        >
-          <circle
-            cx="100"
-            cy="100"
-            r="95"
-            stroke="currentColor"
-            strokeWidth="1"
-          />
-          <circle
-            cx="100"
-            cy="100"
-            r="70"
-            stroke="currentColor"
-            strokeWidth="0.5"
-          />
-          <line
-            x1="100"
-            y1="5"
-            x2="100"
-            y2="30"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-          <line
-            x1="100"
-            y1="170"
-            x2="100"
-            y2="195"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-          <line
-            x1="5"
-            y1="100"
-            x2="30"
-            y2="100"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-          <line
-            x1="170"
-            y1="100"
-            x2="195"
-            y2="100"
-            stroke="currentColor"
-            strokeWidth="2"
-          />
-          <polygon
-            points="100,20 105,50 100,45 95,50"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}

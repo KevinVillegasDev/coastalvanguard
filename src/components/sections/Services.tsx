@@ -51,10 +51,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 mesh-gradient-alt" />
-
+    <section id="services" className="py-32 relative overflow-hidden bg-deep">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />

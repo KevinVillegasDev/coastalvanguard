@@ -28,14 +28,9 @@ const values = [
 
 export default function About() {
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-abyss" />
-      <div className="absolute top-1/3 -left-64 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[150px]" />
-      <div className="absolute bottom-1/4 -right-64 w-[600px] h-[600px] bg-amber/5 rounded-full blur-[150px]" />
-
+    <section id="about" className="py-32 relative overflow-hidden bg-abyss">
       {/* Decorative line */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Content - Asymmetric grid */}
