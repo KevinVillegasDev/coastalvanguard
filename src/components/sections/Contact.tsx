@@ -21,9 +21,9 @@ export default function Contact() {
       <div className="absolute inset-0 mesh-gradient" />
 
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber/30 to-transparent" />
-      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-teal/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-amber/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
 
       {/* Compass decoration */}
       <div className="absolute top-20 right-20 opacity-5">
@@ -32,7 +32,7 @@ export default function Contact() {
           height="200"
           viewBox="0 0 200 200"
           fill="none"
-          className="text-amber"
+          className="text-white"
         >
           <circle
             cx="100"
@@ -97,15 +97,15 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-teal/50" />
-            <span className="text-teal font-medium tracking-[0.2em] uppercase text-xs">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/30" />
+            <span className="text-mist font-medium tracking-[0.2em] uppercase text-xs">
               Start Your Journey
             </span>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-teal/50" />
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/30" />
           </div>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">
             Chart Your Course{" "}
-            <span className="text-gradient-warm">With Us</span>
+            <span className="text-white">With Us</span>
           </h2>
           <p className="text-fog/60 text-lg max-w-2xl mx-auto">
             Ready to transform your marketing? Drop us a line and we'll navigate
@@ -125,8 +125,8 @@ export default function Contact() {
             {/* Email Card */}
             <div className="glass rounded-2xl p-6 glow-border">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-amber/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-amber" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <div className="text-xs text-fog/50 uppercase tracking-wider mb-1">
@@ -134,7 +134,7 @@ export default function Contact() {
                   </div>
                   <a
                     href="mailto:hello@coastalvanguard.com"
-                    className="text-fog hover:text-amber transition-colors duration-300 font-medium"
+                    className="text-fog hover:text-white transition-colors duration-300 font-medium"
                   >
                     hello@coastalvanguard.com
                   </a>
@@ -145,8 +145,8 @@ export default function Contact() {
             {/* Response Time */}
             <div className="glass rounded-2xl p-6 glow-border">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center flex-shrink-0">
-                  <Anchor className="w-5 h-5 text-teal" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Anchor className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <div className="text-xs text-fog/50 uppercase tracking-wider mb-1">
@@ -162,7 +162,7 @@ export default function Contact() {
 
             {/* Decorative quote */}
             <div className="pt-4">
-              <blockquote className="border-l-2 border-amber/30 pl-4">
+              <blockquote className="border-l-2 border-white/20 pl-4">
                 <p className="text-fog/40 italic text-sm leading-relaxed">
                   "The best time to plant a tree was 20 years ago. The second
                   best time is now."
@@ -192,8 +192,8 @@ export default function Contact() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="text-center py-12"
                   >
-                    <div className="w-20 h-20 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle className="w-10 h-10 text-teal" />
+                    <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle className="w-10 h-10 text-white" />
                     </div>
                     <h3 className="font-display text-2xl font-semibold mb-3">
                       Message Received!

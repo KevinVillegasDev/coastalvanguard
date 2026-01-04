@@ -75,23 +75,22 @@ export default function Header() {
                 whileHover={{ y: -2 }}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-amber to-teal transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
               </motion.button>
             ))}
             <motion.button
               onClick={() => handleNavClick("#contact")}
-              className="relative px-6 py-2.5 bg-gradient-to-r from-amber to-amber-glow text-abyss font-semibold text-sm uppercase tracking-wider rounded-sm overflow-hidden group"
+              className="relative px-6 py-2.5 border border-white/30 text-white hover:bg-white/5 font-semibold text-sm uppercase tracking-wider rounded-sm overflow-hidden group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
               <span className="relative z-10">Get Started</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-teal to-teal-deep opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden p-2 text-fog hover:text-amber transition-colors"
+            className="md:hidden p-2 text-fog hover:text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}
@@ -115,7 +114,7 @@ export default function Header() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="block w-full text-left text-fog/80 hover:text-amber py-3 transition-colors duration-200 text-lg font-medium border-b border-white/5"
+                  className="block w-full text-left text-fog/80 hover:text-white py-3 transition-colors duration-200 text-lg font-medium border-b border-white/5"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -124,7 +123,7 @@ export default function Header() {
                 </motion.button>
               ))}
               <motion.button
-                className="w-full mt-4 py-3 bg-gradient-to-r from-amber to-amber-glow text-abyss font-semibold uppercase tracking-wider rounded-sm"
+                className="w-full mt-4 py-3 border border-white/30 text-white hover:bg-white/5 font-semibold uppercase tracking-wider rounded-sm"
                 onClick={() => handleNavClick("#contact")}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}

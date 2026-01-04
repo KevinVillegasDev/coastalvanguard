@@ -32,19 +32,19 @@ export default function Footer() {
           <nav className="flex items-center gap-8 text-sm">
             <a
               href="#services"
-              className="text-fog/50 hover:text-amber transition-colors duration-300"
+              className="text-fog/50 hover:text-white transition-colors duration-300"
             >
               Services
             </a>
             <a
               href="#about"
-              className="text-fog/50 hover:text-amber transition-colors duration-300"
+              className="text-fog/50 hover:text-white transition-colors duration-300"
             >
               About
             </a>
             <a
               href="#contact"
-              className="text-fog/50 hover:text-amber transition-colors duration-300"
+              className="text-fog/50 hover:text-white transition-colors duration-300"
             >
               Contact
             </a>
