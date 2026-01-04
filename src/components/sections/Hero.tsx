@@ -46,15 +46,14 @@ export default function Hero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-8"
+              className="mb-6"
             >
-              <div className="h-px w-12 bg-gradient-to-r from-amber to-transparent" />
-              <span className="text-amber font-medium tracking-[0.2em] uppercase text-xs">
+              <span className="text-mist font-medium tracking-[0.2em] uppercase text-sm">
                 Marketing & Automation
               </span>
             </motion.div>
 
-            {/* Headline - Editorial style with mixed sizes */}
+            {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -64,8 +63,8 @@ export default function Hero() {
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
                 Navigate the
               </span>
-              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                <span className="text-gradient-mixed">Digital Waters</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                Digital Waters
               </span>
               <span className="block text-2xl sm:text-3xl md:text-4xl font-medium text-mist mt-4 tracking-tight">
                 with precision & purpose
@@ -88,31 +87,24 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-start gap-4"
+              className="flex flex-col sm:flex-row items-center gap-6"
             >
               <motion.button
                 onClick={handleScrollToContact}
-                className="group relative px-8 py-4 bg-gradient-to-r from-amber to-amber-glow text-abyss font-bold uppercase tracking-wider text-sm rounded-sm overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group flex items-center gap-2 text-white font-semibold uppercase tracking-wider text-sm hover:text-fog transition-colors"
+                whileHover={{ x: 4 }}
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  Start Your Journey
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
+                Start Your Journey
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
               <motion.button
                 onClick={handleScrollToServices}
-                className="group px-8 py-4 border border-fog/20 text-fog hover:text-white hover:border-teal font-medium uppercase tracking-wider text-sm rounded-sm transition-all duration-300"
+                className="group px-8 py-4 border border-white/30 text-white hover:bg-white/5 font-medium uppercase tracking-wider text-sm rounded-sm transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span className="flex items-center gap-2">
-                  Explore Services
-                  <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                </span>
+                Explore Services
               </motion.button>
             </motion.div>
           </div>
@@ -157,7 +149,7 @@ export default function Hero() {
                           transition={{ delay: 0.7 + index * 0.1 }}
                           className="text-center"
                         >
-                          <div className="text-2xl font-display font-bold text-gradient-warm">
+                          <div className="text-2xl font-display font-bold text-white">
                             {stat.value}
                           </div>
                           <div className="text-xs text-mist uppercase tracking-wider mt-1">
