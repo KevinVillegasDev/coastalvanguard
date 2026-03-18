@@ -2,50 +2,119 @@
 
 import { motion } from "framer-motion";
 import {
-  Target,
+  Globe,
+  Search,
+  MapPin,
+  Share2,
+  Megaphone,
+  Palette,
   Zap,
   BarChart3,
-  Megaphone,
-  Users,
-  Wrench,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const services = [
+interface ServiceCategory {
+  icon: LucideIcon;
+  title: string;
+  services: string[];
+}
+
+const categories: ServiceCategory[] = [
   {
-    icon: Target,
-    title: "Marketing Strategy",
-    description:
-      "Data-driven strategies tailored to your business goals. We identify your ideal customers and craft campaigns that convert.",
+    icon: Globe,
+    title: "Web Design & Development",
+    services: [
+      "Custom Websites",
+      "Landing Pages",
+      "E-Commerce Stores",
+      "Website Redesigns",
+      "Speed & Performance Optimization",
+      "Hosting & Maintenance",
+    ],
   },
   {
-    icon: Zap,
-    title: "Automation Systems",
-    description:
-      "Streamline your workflows with intelligent automation. From email sequences to lead nurturing, we build systems that scale.",
+    icon: Search,
+    title: "SEO & Local Search",
+    services: [
+      "Local SEO",
+      "Technical SEO Audits",
+      "Keyword Strategy",
+      "Content Optimization",
+      "Link Building",
+      "Monthly SEO Reporting",
+    ],
   },
   {
-    icon: BarChart3,
-    title: "Analytics & Insights",
-    description:
-      "Turn data into actionable insights. Our analytics solutions help you understand what's working and optimize for growth.",
+    icon: MapPin,
+    title: "Google Business Profile",
+    services: [
+      "GBP Setup & Verification",
+      "Profile Optimization",
+      "Review Management",
+      "Post Scheduling",
+      "Local Pack Ranking",
+      "Multi-Location Management",
+    ],
+  },
+  {
+    icon: Share2,
+    title: "Social Media",
+    services: [
+      "Content Creation & Scheduling",
+      "Community Management",
+      "Platform Strategy",
+      "Influencer Outreach",
+      "Social Listening",
+      "Monthly Analytics",
+    ],
   },
   {
     icon: Megaphone,
-    title: "Campaign Management",
-    description:
-      "End-to-end campaign execution across all channels. We manage, monitor, and optimize for maximum ROI.",
+    title: "Paid Advertising",
+    services: [
+      "Google Search Ads",
+      "Google Display & Retargeting",
+      "Meta (Facebook & Instagram) Ads",
+      "YouTube Advertising",
+      "Ad Creative & Copywriting",
+      "Campaign Optimization & Reporting",
+    ],
   },
   {
-    icon: Users,
-    title: "CRM Integration",
-    description:
-      "Connect your tools and unify your customer data. Seamless integrations that power personalized experiences.",
+    icon: Palette,
+    title: "Branding & Creative",
+    services: [
+      "Brand Identity Packages",
+      "Logo Design",
+      "Brand Guidelines",
+      "Pitch Decks & Presentations",
+      "Print & Digital Collateral",
+      "Photography & Video Direction",
+    ],
   },
   {
-    icon: Wrench,
-    title: "Custom Solutions",
-    description:
-      "Unique challenges require unique solutions. We build custom tools and workflows designed for your specific needs.",
+    icon: Zap,
+    title: "Automation & CRM",
+    services: [
+      "CRM Setup & Integration",
+      "Email Automation Sequences",
+      "Lead Nurturing Workflows",
+      "Appointment Scheduling",
+      "Chatbot Implementation",
+      "Custom API Integrations",
+    ],
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics & Reporting",
+    services: [
+      "Dashboard Setup (GA4, Looker Studio)",
+      "Conversion Tracking",
+      "Attribution Modeling",
+      "Monthly Performance Reports",
+      "Competitor Analysis",
+      "ROI Measurement",
+    ],
   },
 ];
 
@@ -68,14 +137,14 @@ export default function Services() {
           >
             <div className="flex items-center gap-3 mb-4">
               <span className="text-mist font-medium tracking-[0.2em] uppercase text-xs">
-                Our Expertise
+                What We Do
               </span>
               <div className="h-px flex-1 bg-gradient-to-r from-white/30 to-transparent" />
             </div>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] text-white">
-              Services That
+              Everything Your
               <br />
-              <span className="text-white">Drive Growth</span>
+              <span className="text-white">Business Needs.</span>
             </h2>
           </motion.div>
 
@@ -87,55 +156,78 @@ export default function Services() {
             className="lg:col-span-5 lg:col-start-8 flex items-end"
           >
             <p className="text-fog/70 text-lg leading-relaxed">
-              From strategy to execution, we provide comprehensive marketing and
-              automation solutions that help your business thrive. Each service
-              is tailored to your unique needs.
+              Stop juggling five different vendors. We handle the full picture —
+              strategy to execution — so you get a single partner instead of a
+              patchwork of agencies that don&apos;t talk to each other.
             </p>
           </motion.div>
         </div>
 
-        {/* Services Grid - Bento style */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service, index) => (
+        {/* Service Categories Grid */}
+        <div className="grid md:grid-cols-2 gap-4">
+          {categories.map((category, index) => (
             <motion.div
-              key={service.title}
+              key={category.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative p-8 rounded-2xl glass glow-border overflow-hidden ${
-                index === 0 || index === 3 ? "lg:row-span-1" : ""
-              }`}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="group relative p-8 rounded-2xl glass glow-border overflow-hidden"
             >
               {/* Hover gradient overlay */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/5 via-transparent to-transparent" />
 
-              {/* Content */}
               <div className="relative z-10">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 bg-white/10 text-white group-hover:bg-white/15">
-                  <service.icon className="w-7 h-7" />
+                {/* Category Header */}
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 bg-white/10 text-white group-hover:bg-white/15">
+                    <category.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-white">
+                    {category.title}
+                  </h3>
                 </div>
 
-                {/* Title */}
-                <h3 className="font-display text-xl font-semibold mb-3 text-white transition-colors">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-fog/60 leading-relaxed group-hover:text-fog/80 transition-colors">
-                  {service.description}
-                </p>
-
-                {/* Decorative corner accent */}
-                <div
-                  className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-bl from-white/10 to-transparent"
-                  style={{ borderRadius: "0 1rem 0 0" }}
-                />
+                {/* Service List */}
+                <ul className="space-y-2">
+                  {category.services.map((service) => (
+                    <li
+                      key={service}
+                      className="flex items-center gap-2 text-fog/60 text-sm group-hover:text-fog/80 transition-colors"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-white/30 shrink-0" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-16"
+        >
+          <p className="text-fog/50 text-lg mb-6">
+            Not sure what you need? That&apos;s fine — we&apos;ll figure it out together.
+          </p>
+          <motion.button
+            onClick={() => {
+              const el = document.querySelector("#contact");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-8 py-4 border border-white/30 text-white hover:bg-white/5 font-medium uppercase tracking-wider text-sm rounded-sm transition-all duration-300"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Talk to Us
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

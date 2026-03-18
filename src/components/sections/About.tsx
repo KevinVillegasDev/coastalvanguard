@@ -1,28 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Compass, TrendingUp, Shield, Anchor } from "lucide-react";
+import { Layers, BarChart3, Shield, Target } from "lucide-react";
 
 const values = [
   {
-    icon: Compass,
-    title: "Strategic Navigation",
-    description: "We chart the course through complex digital landscapes with precision.",
+    icon: Layers,
+    title: "Full-Stack Digital Team",
+    description:
+      "Websites, SEO, ads, social, branding, automation — one team handles it all under one roof.",
   },
   {
-    icon: TrendingUp,
-    title: "Results Driven",
-    description: "Every strategy is designed with measurable outcomes in mind.",
+    icon: BarChart3,
+    title: "Data-Driven Decisions",
+    description:
+      "Every recommendation is backed by real audit data and performance metrics. No gut feelings.",
   },
   {
     icon: Shield,
-    title: "Trusted Partner",
-    description: "Your success is our success. We're invested in your growth.",
+    title: "Built to Last",
+    description:
+      "We build systems and assets you own. No vendor lock-in, no proprietary traps.",
   },
   {
-    icon: Anchor,
-    title: "Steady Foundation",
-    description: "Building lasting systems that anchor your business for growth.",
+    icon: Target,
+    title: "Results Over Retainers",
+    description:
+      "We measure success by your growth, not by how long we can keep you on contract.",
   },
 ];
 
@@ -51,12 +55,12 @@ export default function About() {
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8 text-white">
-              Pioneering the
+              One Team.
               <br />
-              <span className="text-white">Digital Frontier</span>
+              <span className="text-white">No Runaround.</span>
             </h2>
 
-            {/* Large decorative number */}
+            {/* Large decorative text */}
             <div className="hidden lg:block">
               <span className="font-display text-[12rem] font-bold text-white/[0.02] leading-none select-none">
                 CV
@@ -74,16 +78,16 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <p className="text-fog/80 text-xl leading-relaxed mb-6">
-                At Coastal Vanguard, we believe that great marketing shouldn&apos;t be
-                complicated. We combine cutting-edge technology with human creativity
-                to build solutions that actually work.
+                Coastal Vanguard was built on a simple idea: businesses
+                shouldn&apos;t need five different vendors to handle their digital
+                presence. One team should own the strategy, the execution, and the
+                results — so nothing falls through the cracks.
               </p>
               <p className="text-fog/60 text-lg leading-relaxed">
-                Our team of strategists, developers, and automation experts work
-                together to create seamless experiences that turn prospects into
-                loyal customers. Whether you&apos;re a startup looking to scale or an
-                established business seeking optimization, we&apos;re here to help you
-                navigate the digital landscape.
+                When you work with us, you&apos;re working directly with the people
+                who build your website, run your ads, and write your copy. No
+                layers of account managers. No outsourced freelancers you&apos;ve
+                never met. Just a focused team that knows your business.
               </p>
             </motion.div>
 

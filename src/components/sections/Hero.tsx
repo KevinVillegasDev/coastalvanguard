@@ -37,7 +37,7 @@ export default function Hero() {
               className="mb-6"
             >
               <span className="text-mist font-medium tracking-[0.2em] uppercase text-sm">
-                Marketing & Automation
+                Full-Service Digital Agency
               </span>
             </motion.div>
 
@@ -49,13 +49,13 @@ export default function Hero() {
               className="font-display mb-8"
             >
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                Navigate the
+                Your Business
               </span>
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                Digital Waters
+                Deserves More
               </span>
               <span className="block text-2xl sm:text-3xl md:text-4xl font-medium text-mist mt-4 tracking-tight">
-                with precision & purpose
+                than a template.
               </span>
             </motion.h1>
 
@@ -66,8 +66,9 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-fog/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10"
             >
-              We architect intelligent marketing systems and automation frameworks
-              that transform how businesses connect, convert, and grow.
+              From websites and SEO to ads, branding, and automation — Coastal
+              Vanguard is the single partner that handles everything digital. No
+              middlemen. No patchwork vendors. Just results.
             </motion.p>
 
             {/* CTAs */}
@@ -79,20 +80,20 @@ export default function Hero() {
             >
               <motion.button
                 onClick={handleScrollToContact}
-                className="group flex items-center gap-2 text-white font-semibold uppercase tracking-wider text-sm hover:text-fog transition-colors"
-                whileHover={{ x: 4 }}
-              >
-                Start Your Journey
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-
-              <motion.button
-                onClick={handleScrollToServices}
                 className="group px-8 py-4 border border-white/30 text-white hover:bg-white/5 font-medium uppercase tracking-wider text-sm rounded-sm transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Explore Services
+                Get a Free Website Audit
+              </motion.button>
+
+              <motion.button
+                onClick={handleScrollToServices}
+                className="group flex items-center gap-2 text-white font-semibold uppercase tracking-wider text-sm hover:text-fog transition-colors"
+                whileHover={{ x: 4 }}
+              >
+                See Our Services
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>
           </div>
@@ -106,7 +107,7 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="relative w-full aspect-square max-w-md mx-auto">
-                {/* Concentric rings - static and visible */}
+                {/* Concentric rings */}
                 {[1, 2, 3].map((ring) => (
                   <div
                     key={ring}
@@ -123,7 +124,7 @@ export default function Hero() {
                     <div className="grid grid-cols-2 gap-6">
                       {[
                         { value: "150+", label: "Projects" },
-                        { value: "98%", label: "Success Rate" },
+                        { value: "98%", label: "Satisfaction" },
                         { value: "5x", label: "Avg. ROI" },
                         { value: "24/7", label: "Support" },
                       ].map((stat, index) => (
@@ -165,7 +166,7 @@ export default function Hero() {
           className="text-mist hover:text-amber transition-colors duration-200 flex flex-col items-center gap-2"
           aria-label="Scroll to services"
         >
-          <span className="text-xs uppercase tracking-[0.2em]">Discover</span>
+          <span className="text-xs uppercase tracking-[0.2em]">See What We Do</span>
           <ChevronDown size={20} />
         </motion.button>
       </motion.div>

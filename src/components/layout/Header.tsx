@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
@@ -84,7 +85,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className="relative z-10">Get Started</span>
+              <span className="relative z-10">Free Audit</span>
             </motion.button>
           </div>
 
@@ -129,7 +130,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Get Started
+                Free Audit
               </motion.button>
             </div>
           </motion.div>

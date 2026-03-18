@@ -32,17 +32,18 @@ export default function Contact() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/30" />
             <span className="text-mist font-medium tracking-[0.2em] uppercase text-xs">
-              Start Your Journey
+              Let&apos;s Talk
             </span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/30" />
           </div>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">
-            Chart Your Course{" "}
-            <span className="text-white">With Us</span>
+            Get Your Free{" "}
+            <span className="text-white">Website Audit</span>
           </h2>
           <p className="text-fog/60 text-lg max-w-2xl mx-auto">
-            Ready to transform your marketing? Drop us a line and we'll navigate
-            the path to your success together.
+            Tell us about your business and we&apos;ll send you a complimentary
+            audit of your website — performance, SEO, mobile experience, and how
+            you stack up against competitors. No pitch, no obligation.
           </p>
         </motion.div>
 
@@ -87,7 +88,7 @@ export default function Contact() {
                   </div>
                   <p className="text-fog font-medium">Within 24 hours</p>
                   <p className="text-fog/50 text-sm mt-1">
-                    We value your time and respond promptly.
+                    We respond with your custom audit results.
                   </p>
                 </div>
               </div>
@@ -97,11 +98,12 @@ export default function Contact() {
             <div className="pt-4">
               <blockquote className="border-l-2 border-white/20 pl-4">
                 <p className="text-fog/40 italic text-sm leading-relaxed">
-                  "The best time to plant a tree was 20 years ago. The second
-                  best time is now."
+                  &ldquo;The businesses that stand out aren&apos;t always the
+                  biggest. They&apos;re the ones that invest in doing digital
+                  right.&rdquo;
                 </p>
                 <footer className="text-fog/30 text-xs mt-2">
-                  — Chinese Proverb
+                  — Coastal Vanguard
                 </footer>
               </blockquote>
             </div>
@@ -129,11 +131,11 @@ export default function Contact() {
                       <CheckCircle className="w-10 h-10 text-white" />
                     </div>
                     <h3 className="font-display text-2xl font-semibold mb-3">
-                      Message Received!
+                      We&apos;re On It!
                     </h3>
                     <p className="text-fog/60 mb-8 max-w-sm mx-auto">
-                      Thank you for reaching out. We'll chart a course back to
-                      you within 24 hours.
+                      Your audit is being prepared. Expect a detailed report and
+                      a quick intro from our team within 24 hours.
                     </p>
                     <Button variant="secondary" onClick={resetStatus}>
                       Send Another Message
@@ -177,7 +179,7 @@ export default function Contact() {
                       {...register("message")}
                       id="message"
                       label="Message"
-                      placeholder="Tell us about your project and goals..."
+                      placeholder="Tell us about your business — what you do, who your customers are, and what's not working..."
                       rows={5}
                       error={errors.message?.message}
                     />
@@ -199,7 +201,7 @@ export default function Contact() {
                       isLoading={isSubmitting}
                     >
                       <Send className="w-4 h-4 mr-2" />
-                      Send Message
+                      Request Free Audit
                     </Button>
                   </motion.form>
                 )}

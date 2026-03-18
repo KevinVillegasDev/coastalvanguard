@@ -16,20 +16,25 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Coastal Vanguard | Custom Marketing & Automation Solutions",
+  title: "Coastal Vanguard | Full-Service Digital Agency — Web, SEO, Ads, Branding & More",
   description:
-    "Transform your business with intelligent marketing strategies and cutting-edge automation solutions. Coastal Vanguard delivers results that matter.",
+    "Coastal Vanguard builds everything digital your business needs. Websites, SEO, paid ads, social media, branding, and automation — one team, no runaround. Get a free website audit today.",
   keywords: [
+    "digital agency",
+    "web design",
+    "SEO",
+    "Google Business Profile",
+    "social media management",
+    "paid advertising",
+    "branding",
+    "website audit",
     "marketing automation",
-    "digital marketing",
-    "business automation",
     "CRM integration",
-    "marketing strategy",
   ],
   openGraph: {
-    title: "Coastal Vanguard | Custom Marketing & Automation Solutions",
+    title: "Coastal Vanguard | Full-Service Digital Agency",
     description:
-      "Transform your business with intelligent marketing strategies and cutting-edge automation solutions.",
+      "One team for everything digital. Websites, SEO, ads, branding, automation — plus a free website audit to show you exactly where to start.",
     type: "website",
   },
 };
