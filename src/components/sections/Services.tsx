@@ -5,9 +5,7 @@ import {
   Globe,
   Search,
   MapPin,
-  Share2,
   Megaphone,
-  Palette,
   Zap,
   BarChart3,
 } from "lucide-react";
@@ -57,18 +55,6 @@ const categories: ServiceCategory[] = [
     ],
   },
   {
-    icon: Share2,
-    title: "Social Media",
-    services: [
-      "Content Creation & Scheduling",
-      "Community Management",
-      "Platform Strategy",
-      "Influencer Outreach",
-      "Social Listening",
-      "Monthly Analytics",
-    ],
-  },
-  {
     icon: Megaphone,
     title: "Paid Advertising",
     services: [
@@ -78,18 +64,6 @@ const categories: ServiceCategory[] = [
       "YouTube Advertising",
       "Ad Creative & Copywriting",
       "Campaign Optimization & Reporting",
-    ],
-  },
-  {
-    icon: Palette,
-    title: "Branding & Creative",
-    services: [
-      "Brand Identity Packages",
-      "Logo Design",
-      "Brand Guidelines",
-      "Pitch Decks & Presentations",
-      "Print & Digital Collateral",
-      "Photography & Video Direction",
     ],
   },
   {

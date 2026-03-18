@@ -4,9 +4,7 @@ const serviceLinks = [
   "Web Design & Development",
   "SEO & Local Search",
   "Google Business Profile",
-  "Social Media",
   "Paid Advertising",
-  "Branding & Creative",
   "Automation & CRM",
   "Analytics & Reporting",
 ];
