@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BrandMark from "@/components/ui/BrandMark";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -48,8 +48,13 @@ export default function Header() {
       <header className={`nav${stuck ? " stuck" : ""}`}>
         <div className="wrap nav-inner">
           <a href="#top" className="brand" aria-label="Coastal Vanguard home">
-            <BrandMark />
-            Coastal Vanguard
+            <Image
+              src="/logo-ink.png"
+              alt="Coastal Vanguard"
+              width={591}
+              height={118}
+              priority
+            />
           </a>
           <nav className="nav-links" aria-label="Primary">
             {navLinks.map((link) => (

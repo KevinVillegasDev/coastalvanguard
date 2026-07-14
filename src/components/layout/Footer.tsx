@@ -1,4 +1,4 @@
-import BrandMark from "@/components/ui/BrandMark";
+import Image from "next/image";
 
 const serviceLinks = [
   "Web & Development",
@@ -15,8 +15,12 @@ export default function Footer() {
         <div className="foot-top">
           <div className="foot-brand">
             <a href="#top" className="brand" aria-label="Coastal Vanguard home">
-              <BrandMark accent="var(--accent-bright)" />
-              Coastal Vanguard
+              <Image
+                src="/logo-white.png"
+                alt="Coastal Vanguard"
+                width={591}
+                height={118}
+              />
             </a>
             <p>
               Full-service digital agency — web, SEO, ads, branding and more.
