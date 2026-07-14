@@ -18,11 +18,10 @@ export default function Hero() {
   }, []);
 
   // Layered depth, Slider Revolution style: the cursor shifts each layer by a
-  // different amount, and on scroll the near ridge RISES (negative multiplier)
-  // while the backdrop recedes, so the ridge sweeps up over the content. The
-  // ridge is the peak cutout recomposed as a separate foreground mountain
-  // (anchored low right), not a registered copy — so the layers can separate
-  // freely without exposing a doubled peak.
+  // different amount, and on scroll the backdrop sinks faster than the peak so
+  // the scene separates. The fg is the backdrop's own peak registered 1:1 and
+  // scaled 1.04, so its relative offsets must stay within that cover margin
+  // (~±25px) or the backdrop's copy of the peak peeks out.
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -63,9 +62,9 @@ export default function Hero() {
       ) => {
         if (el) el.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0)${extra}`;
       };
-      set(bgRef.current, mx * -20, my * -10 + p * heroH * 0.22);
-      set(fgRef.current, mx * -60, my * -30 + p * heroH * -0.38);
-      set(contentRef.current, mx * -16, my * -8);
+      set(bgRef.current, mx * -20, my * -10 + p * heroH * 0.34);
+      set(fgRef.current, mx * -42, my * -22 + p * heroH * 0.2, " scale(1.04)");
+      set(contentRef.current, mx * -12, my * -6);
       set(cloudBackRef.current, mx * -40, my * -16);
       set(cloudFrontRef.current, mx * -85, my * -34);
     };
