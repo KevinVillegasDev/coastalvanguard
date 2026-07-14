@@ -99,15 +99,28 @@ export default function Hero() {
           <a href="#services" className="btn btn-ghost">
             See our services
           </a>
-          <span className="hero-note" style={{ color: "rgb(0, 0, 0)" }}>
-            Reply within 24 hours
-          </span>
+          <span className="hero-note">Reply within 24 hours</span>
         </div>
       </div>
 
       <div className="hero-fg" aria-hidden="true">
+        {/* plain img: next/image would re-encode what the CSS masks already
+            fetch; the media-gated preload skips the download on mobile where
+            this layer is display:none (React hoists the <link> to <head>) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero-peak-fg.webp"
+          media="(min-width: 861px)"
+        />
         <div ref={fgRef} className="prl prl-fg">
-          <Image src="/hero-peak-fg.png" alt="" fill priority sizes="100vw" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-peak-fg.webp"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
           <div className="fg-tint" />
           <div className="fg-shade" />
         </div>

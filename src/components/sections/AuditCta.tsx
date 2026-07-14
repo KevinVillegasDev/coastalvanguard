@@ -76,6 +76,9 @@ export default function AuditCta() {
             <span>
               Turnaround — <b>within 24 hours</b>
             </span>
+            <span>
+              No pressure — <b>the audit is yours either way</b>
+            </span>
           </div>
         </div>
         <form className="audit" onSubmit={handleSubmit} noValidate>

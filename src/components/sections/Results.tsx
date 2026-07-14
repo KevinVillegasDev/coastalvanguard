@@ -39,7 +39,8 @@ export default function Results() {
                 <div className="n">{num.fixed}</div>
               ) : (
                 <div className="n" data-count={num.count} data-suffix={num.suffix}>
-                  0{num.suffix}
+                  {num.count}
+                  {num.suffix}
                 </div>
               )}
               <div className="k">{num.label}</div>

@@ -28,12 +28,12 @@ src/
 │   │   ├── Header.tsx      # Fixed nav, scroll blur, mobile burger menu
 │   │   └── Footer.tsx      # Dark slate footer
 │   ├── sections/
-│   │   ├── Hero.tsx        # Mountain-photo hero, line-reveal headline
-│   │   ├── Positioning.tsx # Statement + 4-stat row (count-up)
-│   │   ├── Services.tsx    # 6-row accordion list
-│   │   ├── Process.tsx     # 4-step timeline
-│   │   ├── Quote.tsx       # Dark band pull-quote
-│   │   ├── Results.tsx     # Big numbers grid (count-up)
+│   │   ├── Hero.tsx        # Mountain-photo hero, SR-style load reveal
+│   │   ├── Positioning.tsx # Slim positioning-statement bridge band
+│   │   ├── Services.tsx    # Sticky head rail + always-open service list
+│   │   ├── Process.tsx     # 4-step band (horizontal >=861px, timeline below)
+│   │   ├── Quote.tsx       # Dark band manifesto + tonal peak silhouette
+│   │   ├── Results.tsx     # Big numbers grid (count-up; real values SSR'd)
 │   │   └── AuditCta.tsx    # Free-audit form card (POSTs to /api/contact)
 │   ├── ui/
 │   │   └── BrandMark.tsx   # Inline SVG shield logo
@@ -52,8 +52,14 @@ src/
 
 ### Key Visual Elements
 - Full-bleed mountain photo hero (`public/hero-peak.jpg`) with cool-grade tint
-  overlay + white veils for headline legibility
+  overlay + white veils; foreground peak cutout (`public/hero-peak-fg.webp`)
+  rises into place on load; `public/hero-peak-mask.webp` is the shared CSS
+  mask for the fg tint/shade and the Quote band silhouette — the fg image and
+  mask URLs must stay in sync
 - Line-mask headline reveal on load (`.hero.lit`), gated behind `html.js`
+- Section vertical rhythm rides the `--band-y` token (`.band--tight` variant);
+  band sections use `padding-block` deliberately — the `padding` shorthand
+  would override `.wrap`'s horizontal padding on `<section class="band wrap">`
 - `.reveal` elements fade/slide in on scroll; `[data-count]` numbers count up
 - Services are an expandable accordion (`aria-expanded` drives CSS grid rows)
 - One dark band (Quote) + dark footer; everything else stays light

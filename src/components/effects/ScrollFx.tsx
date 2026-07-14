@@ -23,10 +23,6 @@ export default function ScrollFx() {
     function countUp(el: HTMLElement) {
       const target = parseFloat(el.dataset.count || "0");
       const suffix = el.dataset.suffix || "";
-      if (reduce) {
-        el.textContent = target + suffix;
-        return;
-      }
       let start: number | null = null;
       const dur = 1500;
       function tick(now: number) {
@@ -39,11 +35,10 @@ export default function ScrollFx() {
       requestAnimationFrame(tick);
     }
 
+    // Stats are server-rendered with their real values (for crawlers and
+    // no-JS visitors); only reset them to 0 when the count-up will run.
     if (!("IntersectionObserver" in window)) {
       revealEls.forEach((el) => el.classList.add("in"));
-      countEls.forEach((el) => {
-        el.textContent = (el.dataset.count || "") + (el.dataset.suffix || "");
-      });
       return;
     }
 
@@ -71,7 +66,12 @@ export default function ScrollFx() {
       },
       { threshold: 0.6 }
     );
-    countEls.forEach((el) => cio.observe(el));
+    if (!reduce) {
+      countEls.forEach((el) => {
+        el.textContent = "0" + (el.dataset.suffix || "");
+        cio.observe(el);
+      });
+    }
 
     return () => {
       disposed = true;

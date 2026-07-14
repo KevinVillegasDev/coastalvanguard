@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 const services = [
   {
     title: "Web Design & Development",
@@ -36,79 +32,36 @@ const services = [
 ];
 
 export default function Services() {
-  const [open, setOpen] = useState<ReadonlySet<number>>(new Set());
-
-  const toggle = (i: number) =>
-    setOpen((prev) => {
-      const next = new Set(prev);
-      if (next.has(i)) {
-        next.delete(i);
-      } else {
-        next.add(i);
-      }
-      return next;
-    });
-
   return (
     <section className="band wrap" id="services">
-      <div className="sec-head reveal">
-        <span className="kicker">What we do</span>
-        <h2>
-          One team,
-          <br />
-          every discipline.
-        </h2>
-        <p>
-          Most agencies hand off between vendors and lose the thread. We run
-          every layer in-house, so strategy, build and growth stay aligned.
-        </p>
-      </div>
+      <div className="svc-split">
+        <div className="sec-head reveal">
+          <span className="kicker">What we do</span>
+          <h2>One team, every discipline.</h2>
+          <p>
+            Most agencies hand off between vendors and lose the thread. We run
+            every layer in-house, so strategy, build and growth stay aligned.
+          </p>
+        </div>
 
-      <div className="svc-list">
-        {services.map((svc, i) => (
-          <div
-            key={svc.title}
-            className="svc reveal"
-            role="button"
-            tabIndex={0}
-            aria-expanded={open.has(i)}
-            onClick={() => toggle(i)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                toggle(i);
-              }
-            }}
-          >
-            <div className="svc-head">
-              <span className="idx">{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{svc.title}</h3>
-                <p className="svc-sum">{svc.sum}</p>
-                <div className="svc-panel">
-                  <div>
-                    <div className="tags">
-                      {svc.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
+        <div className="svc-list">
+          {services.map((svc, i) => (
+            <div key={svc.title} className="svc reveal">
+              <div className="svc-head">
+                <span className="idx">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{svc.title}</h3>
+                  <p className="svc-sum">{svc.sum}</p>
+                  <div className="tags">
+                    {svc.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
-            <span className="toggle" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-              >
-                <path d="M12 5v14M5 12h14" />
-              </svg>
-            </span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -24,13 +24,15 @@ const steps = [
 export default function Process() {
   return (
     <section className="band wrap" id="process">
-      <div className="sec-head reveal">
-        <span className="kicker">How it works</span>
-        <h2>
-          Four steps.
-          <br />
-          No mystery.
-        </h2>
+      <div className="sec-head head-split reveal">
+        <div>
+          <span className="kicker">How it works</span>
+          <h2>
+            Four steps.
+            <br />
+            No mystery.
+          </h2>
+        </div>
         <p>
           From the first audit to ongoing growth, you always know exactly
           what&apos;s happening and why.
@@ -38,7 +40,11 @@ export default function Process() {
       </div>
       <div className="steps">
         {steps.map((step, i) => (
-          <div key={step.title} className="stepd reveal">
+          <div
+            key={step.title}
+            className="stepd reveal"
+            data-d={i > 0 ? i : undefined}
+          >
             <span className="node" />
             <div className="time">Step {String(i + 1).padStart(2, "0")}</div>
             <h3>{step.title}</h3>

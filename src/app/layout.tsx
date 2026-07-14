@@ -42,6 +42,19 @@ export const metadata: Metadata = {
     description:
       "Full-service digital agency — web, SEO, Google & Meta ads, automation and analytics, handled by one accountable team. Start with a free website audit.",
     type: "website",
+    url: "/",
+    siteName: "Coastal Vanguard",
+    images: [
+      {
+        url: "/hero-peak.jpg",
+        width: 1672,
+        height: 941,
+        alt: "Coastal Vanguard — one team for your whole digital presence",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

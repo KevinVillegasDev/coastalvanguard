@@ -3,14 +3,13 @@ export default function Quote() {
     <section className="darkband">
       <div className="wrap reveal">
         <span className="kicker" style={{ justifyContent: "center" }}>
-          The Vanguard view
+          Why we exist
         </span>
-        <blockquote style={{ marginTop: 30 }}>
+        <p className="manifesto" style={{ marginTop: 30 }}>
           The businesses that stand out aren&apos;t always the biggest.
           They&apos;re the ones that invest in{" "}
           <span className="accentword">doing digital right.</span>
-        </blockquote>
-        <cite>— Coastal Vanguard</cite>
+        </p>
       </div>
     </section>
   );
