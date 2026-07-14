@@ -18,10 +18,11 @@ export default function Hero() {
   }, []);
 
   // Layered depth, Slider Revolution style: the cursor shifts each layer by a
-  // different amount, and on scroll the backdrop sinks faster than the peak
-  // cutout so the content (normal flow) slides up and disappears behind it.
-  // The scroll multipliers must keep bg > fg — both images contain the same
-  // peak, and the fg only hides the bg's copy while the bg sinks below it.
+  // different amount, and on scroll the near ridge RISES (negative multiplier)
+  // while the backdrop recedes, so the ridge sweeps up over the content. The
+  // ridge is the peak cutout recomposed as a separate foreground mountain
+  // (anchored low right), not a registered copy — so the layers can separate
+  // freely without exposing a doubled peak.
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -62,11 +63,11 @@ export default function Hero() {
       ) => {
         if (el) el.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0)${extra}`;
       };
-      set(bgRef.current, mx * -12, my * -7 + p * heroH * 0.34);
-      set(fgRef.current, mx * -26, my * -14 + p * heroH * 0.2, " scale(1.05)");
-      set(contentRef.current, mx * -7, my * -4);
-      set(cloudBackRef.current, mx * -18, my * -10);
-      set(cloudFrontRef.current, mx * -34, my * -18);
+      set(bgRef.current, mx * -20, my * -10 + p * heroH * 0.22);
+      set(fgRef.current, mx * -60, my * -30 + p * heroH * -0.38);
+      set(contentRef.current, mx * -16, my * -8);
+      set(cloudBackRef.current, mx * -40, my * -16);
+      set(cloudFrontRef.current, mx * -85, my * -34);
     };
     raf = requestAnimationFrame(loop);
 
