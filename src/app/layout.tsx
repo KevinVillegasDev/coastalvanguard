@@ -1,40 +1,46 @@
 import type { Metadata } from "next";
-import { Outfit, Syne } from "next/font/google";
+import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-bricolage",
+  display: "swap",
+  axes: ["opsz"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
 });
 
-const syne = Syne({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-jetbrains-mono",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "Coastal Vanguard | Full-Service Digital Agency — Web, SEO, Ads, Branding & More",
+  metadataBase: new URL("https://coastalvanguard.com"),
+  title: "Coastal Vanguard — One team for your whole digital presence",
   description:
-    "Coastal Vanguard builds everything digital your business needs. Websites, SEO, paid ads, social media, branding, and automation — one team, no runaround. Get a free website audit today.",
+    "Coastal Vanguard is a full-service digital agency — web, SEO, Google & Meta ads, automation and analytics, handled by one accountable team. No middlemen, no vendor lock-in.",
   keywords: [
     "digital agency",
     "web design",
     "SEO",
     "Google Business Profile",
-    "social media management",
     "paid advertising",
-    "branding",
     "website audit",
     "marketing automation",
     "CRM integration",
+    "analytics",
   ],
   openGraph: {
-    title: "Coastal Vanguard | Full-Service Digital Agency",
+    title: "Coastal Vanguard — One team for your whole digital presence",
     description:
-      "One team for everything digital. Websites, SEO, ads, branding, automation — plus a free website audit to show you exactly where to start.",
+      "Full-service digital agency — web, SEO, Google & Meta ads, automation and analytics, handled by one accountable team. Start with a free website audit.",
     type: "website",
   },
 };
@@ -45,8 +51,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${syne.variable}`}>
-      <body className="font-sans">{children}</body>
+    <html
+      lang="en"
+      className={`${bricolage.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body>
+        {/* Gates entrance animations behind JS before first paint; without JS the CSS
+            shows everything. If hydration never lands (bundle blocked/failed), drop the
+            gate after 3.5s so the page is never left blank — ScrollFx sets the flag. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('js');setTimeout(function(){if(!window.__cvHydrated)document.documentElement.classList.remove('js')},3500);",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
