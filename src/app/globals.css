@@ -95,7 +95,8 @@ body.menu-open .burger span::after { transform: rotate(-45deg); }
 .mobile-menu { position: fixed; inset: 76px 0 0 0; z-index: 90; background: color-mix(in oklch, var(--bg) 97%, transparent); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; padding: 30px var(--edge); transform: translateY(-10px); opacity: 0; pointer-events: none; transition: .28s ease; }
 body.menu-open .mobile-menu { transform: none; opacity: 1; pointer-events: auto; }
 .mobile-menu a { font-family: var(--font-display); font-weight: 600; font-size: 32px; padding: 13px 0; border-bottom: 1px solid var(--line); }
-.mobile-menu .btn { margin-top: 26px; }
+/* the CTA must not inherit the menu-link display type — .mobile-menu a outranks .btn */
+.mobile-menu a.btn { margin-top: 26px; font-family: var(--font-body); font-size: 16px; padding: 16px 28px; border-bottom: none; align-self: stretch; }
 
 /* ============================ SECTIONS ============================ */
 /* padding-block, NOT the padding shorthand — these sections also carry .wrap,
@@ -149,6 +150,8 @@ html:not(.js) .hero-photo { opacity: 1; transform: none; filter: none; }
   .hero-photo { inset: auto 0 0 0; height: min(48vh, 400px); }
   .hero-photo img { object-position: center; }
   .hero-photo::after { background: linear-gradient(0deg, var(--bg), transparent 30%), linear-gradient(180deg, var(--bg), color-mix(in oklch, var(--bg) 40%, transparent) 20%, transparent 42%); }
+  /* the note lands on the photo band here — needs full ink to stay legible */
+  .hero-note { color: var(--ink); }
 }
 
 /* --- layered parallax (Slider Revolution-style): peak cutout in front of the
